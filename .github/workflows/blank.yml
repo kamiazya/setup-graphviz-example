@@ -9,4 +9,4 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-      - uses: gopisaba/setup-graphviz@apt-get-y
+      - uses: ts-graphviz/setup-graphviz@releases/v1
