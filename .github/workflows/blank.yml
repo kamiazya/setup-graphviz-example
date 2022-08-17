@@ -11,4 +11,4 @@ jobs:
           - ubuntu-latest
           - ubuntu-18.04
     steps:
-      - uses: ts-graphviz/setup-graphviz@v1.0.1-0
+      - uses: ts-graphviz/setup-graphviz@v1.0.2-0
