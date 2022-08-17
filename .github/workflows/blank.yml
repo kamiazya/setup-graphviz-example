@@ -9,6 +9,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - ubuntu-18.04
+          - windows-latest
+          - macos-latest
     steps:
       - uses: ts-graphviz/setup-graphviz@v1.0.3-1
