@@ -2,8 +2,8 @@ name: CI
 
 on: [push]
 jobs:
-  run:
-    name: Run
+  test1:
+    name: Test 1
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -12,9 +12,20 @@ jobs:
           - windows-latest
           - macos-latest
     steps:
-      - uses: ts-graphviz/setup-graphviz@v1.1.0-0
+      - uses: ts-graphviz/setup-graphviz@v1.1.0-1
         with:
           ubuntu-graphviz-version: '2.42.2-3build2'
           ubuntu-libgraphvizdev-version: '2.42.2-3build2'
-          macos-graphviz-version: '3.0.0'
           windows-graphviz-version: '2.49.3'
+
+  test2:
+    name: Test 2
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    steps:
+      - uses: ts-graphviz/setup-graphviz@v1.1.0-1
