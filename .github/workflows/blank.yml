@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: ts-graphviz/setup-graphviz@v1.1.0-0
         with:
-          ubuntu-graphviz-version: '3.0.0'
+          ubuntu-graphviz-version: '2.42.2'
           ubuntu-libgraphvizdev-version: '2.42.2'
           macos-graphviz-version: '3.0.0'
           windows-graphviz-version: '2.49.3'
