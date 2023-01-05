@@ -12,7 +12,7 @@ jobs:
           - windows-latest
           - macos-latest
     steps:
-      - uses: ts-graphviz/setup-graphviz@v1.1.0-1
+      - uses: ts-graphviz/setup-graphviz@v1.2.0
         with:
           # Skip to run apt update command on Ubuntu.
           ubuntu-skip-apt-update: 'true' # defalt false
@@ -29,4 +29,4 @@ jobs:
           - windows-latest
           - macos-latest
     steps:
-      - uses: ts-graphviz/setup-graphviz@v1.1.0-1
+      - uses: ts-graphviz/setup-graphviz@v1.2.0
