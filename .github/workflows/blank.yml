@@ -14,9 +14,10 @@ jobs:
     steps:
       - uses: ts-graphviz/setup-graphviz@v1.1.0-1
         with:
-          ubuntu-graphviz-version: '2.42.2-3build2'
-          ubuntu-libgraphvizdev-version: '2.42.2-3build2'
-          windows-graphviz-version: '2.49.3'
+          # Skip to run apt update command on Ubuntu.
+          ubuntu-skip-apt-update: 'true' # defalt false
+          # Skip to run brew update command on macOS.
+          macos-skip-brew-update: 'true' # defalt false
 
   test2:
     name: Test 2
