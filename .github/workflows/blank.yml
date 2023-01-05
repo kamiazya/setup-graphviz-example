@@ -2,11 +2,31 @@ name: CI
 
 on: [push]
 jobs:
-  run:
-    name: Run
+  test1:
+    name: Test 1
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
     steps:
-      - uses: ts-graphviz/setup-graphviz@releases/v1
+      - uses: ts-graphviz/setup-graphviz@v1.2.0
+        with:
+          # Skip to run apt update command on Ubuntu.
+          ubuntu-skip-apt-update: 'true' # defalt false
+          # Skip to run brew update command on macOS.
+          macos-skip-brew-update: 'true' # defalt false
+
+  test2:
+    name: Test 2
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    steps:
+      - uses: ts-graphviz/setup-graphviz@v1.2.0
